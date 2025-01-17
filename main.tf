@@ -7,9 +7,8 @@ resource "null_resource" "docker_repo" {
       private_key = file("${path.module}/id_rsa") 
     }
     inline = [
-      "sudo add-apt-repository \
-       'deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-       $(lsb_release -cs) stable'",
+      "command = "sudo add-apt-repository 'deb [arch=amd64] https://download.docker.com/linux/ubuntu \n $(lsb_release -cs) stable'"
+       
     ]
   }
 }
