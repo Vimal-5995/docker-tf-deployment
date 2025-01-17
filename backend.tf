@@ -5,10 +5,16 @@ terraform {
     }
   }
   required_version = ">= 0.13"
-  backend "s3" {
+ /** backend "s3" {
     profile = "demo"
     region  = "us-east-1"
     key     = "terraform.tfstate"
     bucket  = "<AWS-S3-BUCKET-NAME-GOES-HERE>"
+  }**/
+
+backend "local" {
+    path = "~/terraform/state/terraform.tfstate" 
   }
 }
+
+
