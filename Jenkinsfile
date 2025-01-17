@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/your/repo' 
+                git branch: 'main', url: 'https://github.com/Vimal-5995/docker-tf-deployment/' 
             }
         }
 
